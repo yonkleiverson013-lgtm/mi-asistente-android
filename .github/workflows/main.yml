@@ -31,10 +31,10 @@ jobs:
           echo "ANDROID_SDK_ROOT=" >> $GITHUB_ENV
           echo "ANDROID_NDK_ROOT=" >> $GITHUB_ENV
 
-      - name: Compilar APK con Buildozer
+      -       - name: Compilar APK con Buildozer
         run: |
-          buildozer -v android debug
-
+          buildozer --debug android debug
+          
       - name: Guardar APK
         uses: actions/upload-artifact@v4
         with:
